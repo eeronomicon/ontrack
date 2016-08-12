@@ -1,3 +1,7 @@
+body {
+  padding-bottom: 30px;
+}
+
 .jumbotron {
   background-image: url("../img/banner.png");
   background-size: cover;
@@ -13,11 +17,11 @@
 }
 .resultCol1 {
   text-align: center;
-  height: 100%;
+  min-height: 210px;
 }
 .resultImage {
   display: none;
 }
-#myResults {
+#myResults, #disclaimer {
   display: none;
 }

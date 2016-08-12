@@ -53,8 +53,9 @@ var myScores = function(myInput) {
   return allScores;
 };
 // Determines which of the 5 tracks has the highest score and returns the index and in case of a tie the first occurrence of the tied tracks is the winner
+var highScore // Global variable to be used outside of this functon
 var findTrack = function(myScores) {
-  var highScore = 0;
+  highScore = 0;
   for (i = 0; i < myScores.length; i++) {
     if (myScores[i] > highScore) {
       highScore = myScores[i];
@@ -64,12 +65,12 @@ var findTrack = function(myScores) {
   return highScoreIndex + 1;
 };
 // This function returns the name of the track with the highest score
-var trackName = function(highScore) {
-  var programTracks = ["Ruby/Rails", "PHP/Drupal", "Java/Android", "CSS/Design", "C#/.Net"]
-  return programTracks[highScore - 1];
+var trackName = function(highScoreTrack) {
+  var programTracks = ["Ruby/Rails Warrior", "PHP/Drupal Wizard", "Java/Android Ranger", "CSS/Design Ninja", "C#/.Net Paladin"]
+  return programTracks[highScoreTrack - 1];
 };
 // This function returns the description of the track with the highest score
-var trackDescription = function(highScore) {
+var trackDescription = function(highScoreTrack) {
   var programDescriptions = [
     "Ruby and Rails are typically used by younger companies and startups, especially for building interactive web applications.",
     "PHP and Drupal are typically used to build content-focused websites.",
@@ -77,8 +78,18 @@ var trackDescription = function(highScore) {
     "The CSS/Design track is a launching point for anyone interested in designing beautiful, memorable web experiences.",
     "C# and .NET are typically used by larger enterprises, government agencies, and companies serving enterprise and government clients."
   ]
-  return programDescriptions[highScore - 1];
+  return programDescriptions[highScoreTrack - 1];
 };
+// Returns further text based on the high score
+var trackAffinityText = function(highScore) {
+  var affinityDescriptions = [
+    "This would mean that you show no interest in any of these tracks, but due to the scoring system, you should never see this text!",
+    "Something to keep in mind is that we're not seeing a strong interest. Perhaps more research is needed on your part to find your True Path, Padawan?",
+    "While you're not burning hot for a particular technology track, you're smokin' close!",
+    "We believe you have found your True Path, dear Adventurer. Proceed, and either return with your shield or on it!"
+  ]
+  return affinityDescriptions[highScore];
+}
 
 // Interface Logic
 $(document).ready(function() {
@@ -107,6 +118,7 @@ $(document).ready(function() {
     var yourTrack = findTrack(yourScores);
     var yourTrackName = trackName(yourTrack);
     var yourTrackDescription = trackDescription(yourTrack);
+    var yourTrackAffinity = trackAffinityText(highScore);
     // Assign values to Results section
     $(".yrName").text(yourName);
     $("#yourDestiny").text(yourTrackName);
@@ -114,6 +126,7 @@ $(document).ready(function() {
     for (i = 1; i < 6; i++) {
       $("#scoreTrack" + i).text(trackAffinity[yourScores[i - 1]]);
     }
+    $("#yrAffinity").text(yourTrackAffinity);
     // Display Results content in a Modal
     $("#resultImage" + yourTrack).show();
     $("#resultsModal").modal("show");

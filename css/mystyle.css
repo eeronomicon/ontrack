@@ -22,6 +22,9 @@ body {
 .resultImage {
   display: none;
 }
+.resultImage img {
+  margin: 5px;
+}
 #myResults, #disclaimer {
   display: none;
 }

@@ -92,11 +92,9 @@ $(document).ready(function() {
     for (i = 1; i < 6; i++) {
       $("#scoreTrack" + i).text(yourScores[i - 1]);
     }
-    // Display Results sections
+    // Display Results content in a Modal
     $("#resultImage" + yourTrack).show();
     $("#resultsModal").modal("show");
-    // $("#myResults").fadeIn();
-    // $("#disclaimer").fadeIn();
     // Prevent form default submit behavior
     event.preventDefault();
   });

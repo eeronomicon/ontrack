@@ -1,5 +1,8 @@
 body {
   padding-bottom: 30px;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .jumbotron {
   background-image: url("../img/banner.png");
@@ -24,7 +27,9 @@ body {
 .resultImage img {
   margin: 5px;
 }
-
+#resultsModal .modal-content {
+  background-color: #fef;
+}
 #disclaimer {
   font-size: 10px;
 }

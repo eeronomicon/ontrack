@@ -66,7 +66,7 @@ var findTrack = function(myScores) {
 };
 // This function returns the name of the track with the highest score
 var trackName = function(highScoreTrack) {
-  var programTracks = ["Ruby/Rails Warrior", "PHP/Drupal Wizard", "Java/Android Ranger", "CSS/Design Ninja", "C#/.Net Paladin"]
+  var programTracks = ["Ruby/Rails Warrior", "PHP/Drupal Wizard", "Java/Android Ranger", "CSS/Design Rogue", "C#/.Net Paladin"]
   return programTracks[highScoreTrack - 1];
 };
 // This function returns the description of the track with the highest score

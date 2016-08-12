@@ -11,3 +11,12 @@
 .container p {
   font-size: 16px;
 }
+.resultCol1 {
+  text-align: center;
+}
+.resultImage {
+  display: none;
+}
+#myResults {
+  display: none;
+}

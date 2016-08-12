@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
     <link rel="stylesheet" href="css/mystyle.css" type="text/css">
-    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Let's Get You On Track!</title>
@@ -25,7 +25,7 @@
       <h3>What's Your Thing?</h3>
       <form id="aboutYou">
         <h5>I would like to build websites that are highly interactive:</h5>
-        <select class="form-control" id="qRuby">
+        <select class="form-control" id="qRails">
           <option value="0">Not my thing</option>
           <option value="1">That's interesting</option>
           <option value="2">My life goal!</option>
@@ -49,16 +49,67 @@
           <option value="2">That is my calling!</option>
         </select>
         <h5>Enterprise IT and corporate applications - that is the future:</h5>
-        <select class="form-control" id="qContent">
+        <select class="form-control" id="qDotNet">
           <option value="0">I'm too indie for that</option>
           <option value="1">Luke-warm to medium</option>
           <option value="2">Big data, big code, big everything!</option>
         </select>
-
-
+        <h5>Which of the following technologies interests you the most:</h5>
+        <select class="form-control" id="qTiebreaker">
+          <option value="1">Ruby</option>
+          <option value="2">PHP</option>
+          <option value="3">Java</option>
+          <option value="4">CSS</option>
+          <option value="5">C#</option>
+        </select>
+        <br />
+        <button type="return" class="btn btn-inverse">Show Me My Future!</button>
       </form>
 
       <!-- Results -->
+      <div id="myResults">
+        <h3>Behind the Door Lies Your Destiny!</h3>
+        <div class="row">
+          <div class="col-xs-4 resultCol1">
+            <div class="resultImage" id="resultRails">
+              <img src="img/tracks/ruby.png" alt="Ruby">
+              <img src="img/tracks/rails.png" alt="Rails">
+            </div>
+            <div class="resultImage" id="resultDrupal">
+              <img src="img/tracks/php.png" alt="PHP">
+              <img src="img/tracks/drupal.png" alt="Drupal">
+            </div>
+            <div class="resultImage" id="resultAndroid">
+              <img src="img/tracks/java.png" alt="Java">
+              <img src="img/tracks/android.png" alt="Android">
+            </div>
+            <div class="resultImage" id="resultDesign">
+              <img src="img/tracks/css.png" alt="CSS">
+              <img src="img/tracks/design.png" alt="Design">
+            </div>
+            <div class="resultImage" id="resultDotNet">
+              <img src="img/tracks/csharp.png" alt="C#">
+              <img src="img/tracks/dotnet.png" alt=".Net">
+            </div>
+          </div>
+          <div class="col-xs-8 resultCol2">
+            <h4>You should go for PHP/Drupal</h4>
+            <p id="resultText">PHP and Drupal are typically used to build content-focused websites.</p>
+            <p>Here's how your scores added up:</p>
+            <ul>
+              <li>Ruby/Rails: <span id="scoreRails"></span></li>
+              <li>PHP/Drupal: <span id="scoreRails"></span></li>
+              <li>Java/Android: <span id="scoreRails"></span></li>
+              <li>CSS/Design: <span id="scoreRails"></span></li>
+              <li>C#/.Net: <span id="scoreRails"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <h3>Obligatory Disclaimer</h3>
+      <p>This app takes a highly non-scientific approach to take a bunch of easy answers and shoot out a result based on easy peasy correlation between your interests and course track descriptions. You should take these results with a sack of salt and do your own proper research. We take no responsibility if it turns out that there is a troll under the bridge. As the sage advice once given went, "It's dangerous to go alone! Take this." As to what <em>this</em> might be is up to you.</p>
 
     </div>
   </body>

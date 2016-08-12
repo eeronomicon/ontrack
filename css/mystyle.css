@@ -1,0 +1,9 @@
+.jumbotron {
+  background-image: url("../img/banner.png");
+  background-size: cover;
+}
+.jumbotron h2 {
+  font-size: 36px;
+  color: #ddd;
+  text-shadow: 3px 3px #222;
+}

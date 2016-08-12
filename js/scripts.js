@@ -1,8 +1,21 @@
 // Business Logic
-// This function collects user input and adds a 3 point bonus based on the tiebreaker answer
+// Checks the user input to detect if any of the tracks are tied at the lead
+// var tiedLead = function(myInput) {
+//   var tally = [];
+//   for(var i = 0; i < myInput.length; i++) {
+//     if(tally[myInput[i]] === undefined) {
+//       tally[myInput[i]] = 1;
+//     }
+//     else {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+// Goes through user input and adds a point bonus based on the tiebreaker answer
 var myScores = function(myInput) {
   if (myInput[5] === 1) {
-    scRails = myInput[0] + 3;
+    scRails = myInput[0] + 1;
     scDrupal = myInput[1];
     scAndroid = myInput[2];
     scDesign = myInput[3];
@@ -10,7 +23,7 @@ var myScores = function(myInput) {
   }
   else if (myInput[5] === 2) {
     scRails = myInput[0];
-    scDrupal = myInput[1] + 3;
+    scDrupal = myInput[1] + 1;
     scAndroid = myInput[2];
     scDesign = myInput[3];
     scDotNet = myInput[4];
@@ -18,7 +31,7 @@ var myScores = function(myInput) {
   else if (myInput[5] === 3) {
     scRails = myInput[0];
     scDrupal = myInput[1];
-    scAndroid = myInput[2] + 3;
+    scAndroid = myInput[2] + 1;
     scDesign = myInput[3];
     scDotNet = myInput[4];
   }
@@ -26,7 +39,7 @@ var myScores = function(myInput) {
     scRails = myInput[0];
     scDrupal = myInput[1];
     scAndroid = myInput[2];
-    scDesign = myInput[3] + 3;
+    scDesign = myInput[3] + 1;
     scDotNet = myInput[4];
   }
   else {
@@ -34,12 +47,12 @@ var myScores = function(myInput) {
     scDrupal = myInput[1];
     scAndroid = myInput[2];
     scDesign = myInput[3];
-    scDotNet = myInput[4] + 3;
+    scDotNet = myInput[4] + 1;
   }
   var allScores = [scRails,  scDrupal,  scAndroid,  scDesign,  scDotNet];
   return allScores;
 };
-// This function determines which of the 5 tracks has the highest score and returns the index
+// Determines which of the 5 tracks has the highest score and returns the index and in case of a tie the first occurrence of the tied tracks is the winner
 var findTrack = function(myScores) {
   var highScore = 0;
   for (i = 0; i < myScores.length; i++) {
@@ -70,6 +83,13 @@ var trackDescription = function(highScore) {
 // Interface Logic
 $(document).ready(function() {
   $("form#aboutYou").submit(function(event) {
+    // To be used in converting affinity score to text
+    var trackAffinity = [
+      "Little or no interest.",
+      "Somewhat on your radar.",
+      "Quite intrigued, aren't you?",
+      "This is your life's True Calling!"
+    ]
     // Hide results in case the form is resubmitted
     $("#myResults").hide();
     $(".resultImage").hide();
@@ -92,7 +112,7 @@ $(document).ready(function() {
     $("#yourDestiny").text(yourTrackName);
     $("#resultText").text(yourTrackDescription);
     for (i = 1; i < 6; i++) {
-      $("#scoreTrack" + i).text(yourScores[i - 1]);
+      $("#scoreTrack" + i).text(trackAffinity[yourScores[i - 1]]);
     }
     // Display Results content in a Modal
     $("#resultImage" + yourTrack).show();

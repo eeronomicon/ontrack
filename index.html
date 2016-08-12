@@ -69,56 +69,52 @@
         <br />
         <button type="return" class="btn btn-inverse">Show Me My Future!</button>
       </form>
-      <!-- Results -->
-      <div id="myResults">
-        <h3>Behind the Door Lies Your Destiny!</h3>
-        <div class="row">
-          <div class="col-xs-4 resultCol1">
-            <div class="resultImage" id="resultImage1">
-              <img src="img/tracks/ruby.png" alt="Ruby">
-              <br />
-              <img src="img/tracks/rails.png" alt="Rails">
+      <!-- Results in a Modal -->
+      <div id="resultsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">&times;</button>
+              <h4>This Be Thy Destiny, Mortal!</h4>
             </div>
-            <div class="resultImage" id="resultImage2">
-              <img src="img/tracks/php.png" alt="PHP">
-              <br />
-              <img src="img/tracks/drupal.png" alt="Drupal">
+            <div class="modal-body">
+                <div class="resultImage" id="resultImage1">
+                  <img src="img/tracks/ruby.png" alt="Ruby">
+                  <img src="img/tracks/rails.png" alt="Rails">
+                </div>
+                <div class="resultImage" id="resultImage2">
+                  <img src="img/tracks/php.png" alt="PHP">
+                  <img src="img/tracks/drupal.png" alt="Drupal">
+                </div>
+                <div class="resultImage" id="resultImage3">
+                  <img src="img/tracks/java.png" alt="Java">
+                  <img src="img/tracks/android.png" alt="Android">
+                </div>
+                <div class="resultImage" id="resultImage4">
+                  <img src="img/tracks/css.png" alt="CSS">
+                  <img src="img/tracks/design.png" alt="Design">
+                </div>
+                <div class="resultImage" id="resultImage5">
+                  <img src="img/tracks/csharp.png" alt="C#">
+                  <img src="img/tracks/dotnet.png" alt=".Net">
+                </div>
+                <h4>You should go for <span id="yourDestiny"></span></h4>
+                <p id="resultText"></p>
+                <p>Here are your levels of interest:</p>
+                <ul class="unstyled">
+                  <li>Ruby/Rails: <span id="scoreTrack1"></span></li>
+                  <li>PHP/Drupal: <span id="scoreTrack2"></span></li>
+                  <li>Java/Android: <span id="scoreTrack3"></span></li>
+                  <li>CSS/Design: <span id="scoreTrack4"></span></li>
+                  <li>C#/.Net: <span id="scoreTrack5"></span></li>
+                </ul>
+                <p>Keep in mind that you'll also need to complete the <em>Intro To Programming</em> and <em>JavaScript</em> courses.</p>
+                <h3>But What If There's an Ogre Behind That Door?</h3>
+                <p id="disclaimer">This app takes a <strong>highly non-scientific</strong> approach to take a bunch of easy answers and shoot out a result based on easy peasy correlation between your interests and course track descriptions. You should take these results with a sack of salt and do your own proper research. We take no responsibility if that Ogre ends up literally having your for dinner. As the sage advice once given went, "It's dangerous to go alone! Take this." As to what <em>this</em> might be is up to you. Also note that this is what you'd also refer to as "the fine print."</p>
+              </div>
             </div>
-            <div class="resultImage" id="resultImage3">
-              <img src="img/tracks/java.png" alt="Java">
-              <br />
-              <img src="img/tracks/android.png" alt="Android">
-            </div>
-            <div class="resultImage" id="resultImage4">
-              <img src="img/tracks/css.png" alt="CSS">
-              <br />
-              <img src="img/tracks/design.png" alt="Design">
-            </div>
-            <div class="resultImage" id="resultImage5">
-              <img src="img/tracks/csharp.png" alt="C#">
-              <br />
-              <img src="img/tracks/dotnet.png" alt=".Net">
-            </div>
-          </div>
-          <div class="col-xs-8 resultCol2">
-            <h4>You should go for <span id="yourDestiny"></span></h4>
-            <p id="resultText"></p>
-            <p>Here are your levels of interest:</p>
-            <ul class="unstyled">
-              <li>Ruby/Rails: <span id="scoreTrack1"></span></li>
-              <li>PHP/Drupal: <span id="scoreTrack2"></span></li>
-              <li>Java/Android: <span id="scoreTrack3"></span></li>
-              <li>CSS/Design: <span id="scoreTrack4"></span></li>
-              <li>C#/.Net: <span id="scoreTrack5"></span></li>
-            </ul>
           </div>
         </div>
-        <p>Keep in mind that you'll also need to complete the <em>Intro To Programming</em> and <em>JavaScript</em> courses.</p>
-      </div>
-      <!-- Disclaimer -->
-      <div id="disclaimer">
-        <h3>But What If There's an Ogre Behind That Door?</h3>
-        <p>This app takes a <strong>highly non-scientific</strong> approach to take a bunch of easy answers and shoot out a result based on easy peasy correlation between your interests and course track descriptions. You should take these results with a sack of salt and do your own proper research. We take no responsibility if that Ogre ends up literally having your for dinner. As the sage advice once given went, "It's dangerous to go alone! Take this." As to what <em>this</em> might be is up to you. Also note that this is what you'd also refer to as "the fine print."</p>
       </div>
     </div>
   </body>

@@ -94,8 +94,9 @@ $(document).ready(function() {
     }
     // Display Results sections
     $("#resultImage" + yourTrack).show();
-    $("#myResults").fadeIn();
-    $("#disclaimer").fadeIn();
+    $("#resultsModal").modal("show");
+    // $("#myResults").fadeIn();
+    // $("#disclaimer").fadeIn();
     // Prevent form default submit behavior
     event.preventDefault();
   });

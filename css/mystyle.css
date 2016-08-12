@@ -24,9 +24,7 @@ body {
 .resultImage img {
   margin: 5px;
 }
-#myResults, #disclaimer {
-  display: none;
-}
-#disclaimer p {
+
+#disclaimer {
   font-size: 10px;
 }

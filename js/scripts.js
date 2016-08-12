@@ -70,34 +70,33 @@ var trackDescription = function(highScore) {
 // Interface Logic
 $(document).ready(function() {
   $("form#aboutYou").submit(function(event) {
+    // Hide results in case the form is resubmitted
     $("#myResults").hide();
     $(".resultImage").hide();
-
+    // Grab values from input fields
     var sRails = parseInt($("#qRails").val());
     var sDrupal = parseInt($("#qDrupal").val());
     var sAndroid = parseInt($("#qAndroid").val());
     var sDesign = parseInt($("#qDesign").val());
     var sDotNet = parseInt($("#qDotNet").val());
     var sTiebreaker = parseInt($("#qTiebreaker").val());
-
+    // Call functions to calculate scores and determine top score
     var yourInput = [sRails,  sDrupal,  sAndroid,  sDesign,  sDotNet,  sTiebreaker];
     var yourScores = myScores(yourInput);
     var yourTrack = findTrack(yourScores);
     var yourTrackName = trackName(yourTrack);
     var yourTrackDescription = trackDescription(yourTrack);
-
+    // Assign values to Results section
     $("#yourDestiny").text(yourTrackName);
     $("#resultText").text(yourTrackDescription);
     for (i = 1; i < 6; i++) {
       $("#scoreTrack" + i).text(yourScores[i - 1]);
     }
-
+    // Display Results sections
     $("#myResults").show();
     $("#resultImage" + yourTrack).show();
     $("#disclaimer").show();
-
+    // Prevent form default submit behavior
     event.preventDefault();
   });
-
-
 });

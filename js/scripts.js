@@ -102,7 +102,6 @@ $(document).ready(function() {
       "This is your life's True Calling!"
     ]
     // Hide results in case the form is resubmitted
-    $("#myResults").hide();
     $(".resultImage").hide();
     // Grab values from input fields
     var yourName = $("#myName").val();

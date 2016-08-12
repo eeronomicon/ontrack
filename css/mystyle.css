@@ -27,3 +27,6 @@ body {
 #myResults, #disclaimer {
   display: none;
 }
+#disclaimer p {
+  font-size: 10px;
+}

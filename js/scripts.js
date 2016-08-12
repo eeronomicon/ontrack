@@ -93,9 +93,9 @@ $(document).ready(function() {
       $("#scoreTrack" + i).text(yourScores[i - 1]);
     }
     // Display Results sections
-    $("#myResults").show();
     $("#resultImage" + yourTrack).show();
-    $("#disclaimer").show();
+    $("#myResults").fadeIn();
+    $("#disclaimer").fadeIn();
     // Prevent form default submit behavior
     event.preventDefault();
   });

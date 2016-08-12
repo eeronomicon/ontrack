@@ -22,44 +22,50 @@
       <!-- Input Form -->
       <h3>What's Your Thing?</h3>
       <form id="aboutYou">
-        <h5>I would like to build websites that are highly interactive:</h5>
-        <select class="form-control" id="qRails">
-          <option value="0">Interactivity is not my thing, sorry</option>
-          <option value="1">That's kinda interesting</option>
-          <option value="2">My life goal!</option>
-        </select>
-        <h5>I'm interested in websites that handle lots and lots of content:</h5>
-        <select class="form-control" id="qDrupal">
-          <option value="0">TL:DR is my way of life and I have no room for more content</option>
-          <option value="1">I'm mildly intrigued</option>
-          <option value="2">Wheelhouse, baby!</option>
-        </select>
-        <h5>Mobile apps are where they're at, and that's where I wanna go:</h5>
-        <select class="form-control" id="qAndroid">
-          <option value="0">Smartphone apps are a blight upon society</option>
-          <option value="1">I'm curious as to how it's done</option>
-          <option value="2">I wanna be an Android Master!</option>
-        </select>
-        <h5>I want to make the websites pretty and neat and easy to use:</h5>
-        <select class="form-control" id="qDesign">
-          <option value="0">Interface schminterface... bleh</option>
-          <option value="1">The User Experience is kinda important... kinda</option>
-          <option value="2">That is my calling!</option>
-        </select>
-        <h5>Enterprise IT and corporate applications - that is the future:</h5>
-        <select class="form-control" id="qDotNet">
-          <option value="0">I'm too indie for that suit and tie business</option>
-          <option value="1">Luke-warm to medium</option>
-          <option value="2">Big data, big code, big everything!</option>
-        </select>
-        <h5>Which of the following technologies interests you the most:</h5>
-        <select class="form-control" id="qTiebreaker">
-          <option value="1">Ruby</option>
-          <option value="2">PHP</option>
-          <option value="3">Java</option>
-          <option value="4">CSS</option>
-          <option value="5">C#</option>
-        </select>
+        <div class="row">
+          <div class="col-md-6">
+            <h5>1. I would like to build websites that are highly interactive:</h5>
+            <select class="form-control" id="qRails">
+              <option value="0">Interactivity is not my thing, sorry</option>
+              <option value="1">That's kinda interesting</option>
+              <option value="2">My life goal!</option>
+            </select>
+            <h5>2. I'm interested in websites that handle lots and lots of content:</h5>
+            <select class="form-control" id="qDrupal">
+              <option value="0">TL:DR is my way of life and I have no room for more content</option>
+              <option value="1">I'm mildly intrigued</option>
+              <option value="2">Wheelhouse, baby!</option>
+            </select>
+            <h5>3. Mobile apps are where they're at, and that's where I wanna go:</h5>
+            <select class="form-control" id="qAndroid">
+              <option value="0">Smartphone apps are a blight upon society</option>
+              <option value="1">I'm curious as to how it's done</option>
+              <option value="2">I wanna be an Android Master!</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <h5>4. I want to make the websites pretty and neat and easy to use:</h5>
+            <select class="form-control" id="qDesign">
+              <option value="0">Interface schminterface... bleh</option>
+              <option value="1">The User Experience is kinda important... kinda</option>
+              <option value="2">That is my calling!</option>
+            </select>
+            <h5>5. Enterprise IT and corporate applications - that is the future:</h5>
+            <select class="form-control" id="qDotNet">
+              <option value="0">I'm too indie for that suit and tie business</option>
+              <option value="1">Luke-warm to medium</option>
+              <option value="2">Big data, big code, big everything!</option>
+            </select>
+            <h5>6. Which of the following technologies interests you the most:</h5>
+            <select class="form-control" id="qTiebreaker">
+              <option value="1">Ruby</option>
+              <option value="2">PHP</option>
+              <option value="3">Java</option>
+              <option value="4">CSS</option>
+              <option value="5">C#</option>
+            </select>
+          </div>
+        </div>
         <br />
         <button type="return" class="btn btn-inverse">Show Me My Future!</button>
       </form>
@@ -105,14 +111,14 @@
               <li>CSS/Design: <span id="scoreTrack4"></span></li>
               <li>C#/.Net: <span id="scoreTrack5"></span></li>
             </ul>
-            <p>Keep in mind that you'll also need to complete the <em>Intro To Programming</em> and <em>JavaScript</em> courses.</p>
           </div>
         </div>
+        <p>Keep in mind that you'll also need to complete the <em>Intro To Programming</em> and <em>JavaScript</em> courses.</p>
       </div>
       <!-- Disclaimer -->
       <div id="disclaimer">
         <h3>But What If There's an Ogre Behind That Door?</h3>
-        <p>This app takes a <strong>highly non-scientific</strong> approach to take a bunch of easy answers and shoot out a result based on easy peasy correlation between your interests and course track descriptions. You should take these results with a sack of salt and do your own proper research. We take no responsibility if that Ogre ends up literally having your for dinner. As the sage advice once given went, "It's dangerous to go alone! Take this." As to what <em>this</em> might be is up to you.</p>
+        <p>This app takes a <strong>highly non-scientific</strong> approach to take a bunch of easy answers and shoot out a result based on easy peasy correlation between your interests and course track descriptions. You should take these results with a sack of salt and do your own proper research. We take no responsibility if that Ogre ends up literally having your for dinner. As the sage advice once given went, "It's dangerous to go alone! Take this." As to what <em>this</em> might be is up to you. Also note that this is what you'd also refer to as "the fine print."</p>
       </div>
     </div>
   </body>

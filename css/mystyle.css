@@ -27,6 +27,9 @@ body {
 .resultImage img {
   margin: 5px;
 }
+.classIcon {
+  float: right;
+}
 #resultsModal .modal-content {
   background-color: #fef;
 }

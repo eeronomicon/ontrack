@@ -84,7 +84,7 @@ var trackDescription = function(highScoreTrack) {
 var trackAffinityText = function(highScore) {
   var affinityDescriptions = [
     "This would mean that you show no interest in any of these tracks, but due to the scoring system, you should never see this text!",
-    "Something to keep in mind is that we're not seeing a strong interest. Perhaps more research is needed on your part to find your True Path, Padawan?",
+    "We're not sensing a strong interest on your part. Perhaps more research is needed on your part to find your True Path, Padawan?",
     "While you're not burning hot for a particular technology track, you're smokin' close!",
     "We believe you have found your True Path, dear Adventurer. Proceed, and either return with your shield or on it!"
   ]

@@ -22,6 +22,10 @@
       <!-- Input Form -->
       <h3>Choose Wisely</h3>
       <form id="aboutYou">
+        <div class="form-group">
+          <label for="myName">How shall we know you?</label>
+          <input class="form-control" type="text" id="myName" placeholder="Your name, please" required>
+        </div>
         <div class="row">
           <div class="col-md-6">
             <h5>1. I would like to build websites that are highly interactive:</h5>
@@ -75,7 +79,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <button class="close" data-dismiss="modal">&times;</button>
-              <h3>This Be Thy Destiny, Mortal!</h3>
+              <h3>This Be Thy Destiny, <span class="yrName"></span>!</h3>
             </div>
             <div class="modal-body">
                 <div class="resultImage" id="resultImage1">
@@ -98,7 +102,7 @@
                   <img src="img/tracks/csharp.png" alt="C#">
                   <img src="img/tracks/dotnet.png" alt=".Net">
                 </div>
-                <h4>You should go for <span id="yourDestiny"></span></h4>
+                <h4>You should go for <span id="yourDestiny"></span>, <span class="yrName"></span>.</h4>
                 <p id="resultText"></p>
                 <p>Here are your levels of interest:</p>
                 <ul class="unstyled">
@@ -108,7 +112,7 @@
                   <li>CSS/Design: <span id="scoreTrack4"></span></li>
                   <li>C#/.Net: <span id="scoreTrack5"></span></li>
                 </ul>
-                <p>Keep in mind that you'll also need to complete the <em>Intro To Programming</em> and <em>JavaScript</em> courses.</p>
+                <p>Keep in mind, <span class="yrName"></span>, that you'll also need to complete the <em>Intro To Programming</em> and <em>JavaScript</em> courses.</p>
                 <h4>But What If There's an Ogre Behind That Door?</h4>
                 <p id="disclaimer">This app takes a <strong>highly non-scientific</strong> approach to take a bunch of easy answers and shoot out a result based on easy peasy correlation between your interests and course track descriptions. You should take these results with a sack of salt and do your own proper research. We take no responsibility if that Ogre ends up literally having your for dinner. As the sage advice once given went, "It's dangerous to go alone! Take this." As to what <em>this</em> might be is up to you. Also note that this is what you'd also refer to as "the fine print."</p>
               </div>

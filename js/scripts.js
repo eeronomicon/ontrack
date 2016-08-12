@@ -74,6 +74,7 @@ $(document).ready(function() {
     $("#myResults").hide();
     $(".resultImage").hide();
     // Grab values from input fields
+    var yourName = $("#myName").val();
     var sRails = parseInt($("#qRails").val());
     var sDrupal = parseInt($("#qDrupal").val());
     var sAndroid = parseInt($("#qAndroid").val());
@@ -87,6 +88,7 @@ $(document).ready(function() {
     var yourTrackName = trackName(yourTrack);
     var yourTrackDescription = trackDescription(yourTrack);
     // Assign values to Results section
+    $(".yrName").text(yourName);
     $("#yourDestiny").text(yourTrackName);
     $("#resultText").text(yourTrackDescription);
     for (i = 1; i < 6; i++) {

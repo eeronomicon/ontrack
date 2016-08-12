@@ -1,17 +1,4 @@
 // Business Logic
-// Checks the user input to detect if any of the tracks are tied at the lead
-// var tiedLead = function(myInput) {
-//   var tally = [];
-//   for(var i = 0; i < myInput.length; i++) {
-//     if(tally[myInput[i]] === undefined) {
-//       tally[myInput[i]] = 1;
-//     }
-//     else {
-//       return true;
-//     }
-//   }
-//   return false;
-// }
 // Goes through user input and adds a point bonus based on the tiebreaker answer
 var myScores = function(myInput) {
   if (myInput[5] === 1) {

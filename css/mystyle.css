@@ -13,6 +13,7 @@
 }
 .resultCol1 {
   text-align: center;
+  height: 100%;
 }
 .resultImage {
   display: none;

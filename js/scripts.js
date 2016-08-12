@@ -41,13 +41,29 @@ var myScores = function(myInput) {
 };
 // This function determines which of the 5 tracks has the highest score and returns the index
 var findTrack = function(myScores) {
-  
+  var highScore = 0;
+  for (i = 0; i < myScores.length; i++) {
+    if (myScores[i] > highScore) {
+      highScore = myScores[i];
+      highScoreIndex = i;
+    }
+  }
+  return highScoreIndex + 1;
 };
+// This function returns the name of the track with the highest score
+var trackName = function(highScore) {
+  var programTracks = ["Ruby/Rails", "PHP/Drupal", "Java/Android", "CSS/Design", "C#/.Net"]
+  return programTracks[highScore - 1];
+}
+// This function returns the description of the track with the highest score
 
 
 // Interface Logic
 $(document).ready(function() {
   $("form#aboutYou").submit(function(event) {
+    $("#myResults").hide();
+    $(".resultImage").hide();
+
     var sRails = parseInt($("#qRails").val());
     var sDrupal = parseInt($("#qDrupal").val());
     var sAndroid = parseInt($("#qAndroid").val());
@@ -56,9 +72,17 @@ $(document).ready(function() {
     var sTiebreaker = parseInt($("#qTiebreaker").val());
 
     var yourInput = [sRails,  sDrupal,  sAndroid,  sDesign,  sDotNet,  sTiebreaker];
-    alert(Math.max.apply(null, myScores(yourInput)));
+    var yourScores = myScores(yourInput);
+    var yourTrack = findTrack(yourScores);
+    var yourTrackName = trackName(yourTrack);
+
+    $("#yourDestiny").text(yourTrackName);
+    for (i = 1; i < 6; i++) {
+      $("#scoreTrack" + i).text(yourScores[i - 1]);
+    }
 
     $("#myResults").show();
+    $("#resultImage" + yourTrack).show();
 
     event.preventDefault();
   });

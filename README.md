@@ -19,6 +19,10 @@ There are no known issues with this program.
 
 Please contact me via GitHub.
 
+## GitHub Page
+
+This program will be published as a GitHub page [here](https://eeronomicon.github.io/ontrack).
+
 ## Technologies Used
 
 This program uses HTML, JavaScript, and CSS. Bootstrap and jQuery are also used.
